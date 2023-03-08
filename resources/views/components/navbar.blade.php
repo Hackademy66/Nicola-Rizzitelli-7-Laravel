@@ -13,6 +13,9 @@
             <a class="nav-link" href="{{route('game.create')}}">Add your videogame</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="{{route('consolex.create')}}">Add your console</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="{{route('contact_us')}}">Contact Us</a>
           </li>
           @auth
