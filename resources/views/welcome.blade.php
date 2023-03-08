@@ -62,11 +62,11 @@
         </div>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-12 col md-4">
-                    <img src="https://images.everyeye.it/img-articoli/realta-virtuale-giochi-vr-attesi-2021-v8-51595.jpg" alt="">
+                <div class="col-12 col-md-4">
+                    <img width="600px" src="https://images.everyeye.it/img-articoli/realta-virtuale-giochi-vr-attesi-2021-v8-51595.jpg" alt="">
                 </div>
-                <div class="col-12 col-md-6">
-
+                <div class="col-12 col-md-8">
+                    <h2 class="text-black">Get free games and in-game loot every month</h2>
                 </div>
             </div>
         </div>
