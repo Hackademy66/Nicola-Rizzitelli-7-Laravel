@@ -7,12 +7,18 @@ use Illuminate\Http\Request;
 
 class ConsolexController extends Controller
 {
+    
+    public function __construct(){
+        $this->middleware('auth')->except('index', 'show');
+    }
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        $consolexes = Consolex::all();
+
+        return view('consolex.index', compact('consolexes'));
     }
 
     /**
@@ -28,7 +34,14 @@ class ConsolexController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $console = Consolex::create([
+            'name' =>$request->name,
+            'brand' =>$request->brand,
+            'logo' =>$request->file('logo')->store('public/logos'),
+            'description' =>$request->description,            
+        ]);
+        return redirect(route('homepage'))->with('consolexCreated', 'You have successfully created a console.
+        ');
     }
 
     /**
@@ -36,7 +49,7 @@ class ConsolexController extends Controller
      */
     public function show(Consolex $consolex)
     {
-        //
+        return view('consolex\show', compact('consolex'));
     }
 
     /**

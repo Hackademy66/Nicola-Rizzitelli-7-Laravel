@@ -2,7 +2,7 @@
     <div class="container my5">
         <div class="row justify-content-center">
             <div class="col-12 col-md-8">
-                <form class="p-5 shadow" method="POST" action="{{route('game.store')}}" enctype="multipart/form-data">
+                <form class="p-5 shadow" method="POST" action="{{route('consolex.store')}}" enctype="multipart/form-data">
                     @if ($errors->any())
                         <div class="alert alert-danger">
                             <ul>

@@ -24,3 +24,6 @@ Route::get('/game/create', [GameController::class, 'create'])->name('game.create
 Route::post('/game/store', [GameController::class, 'store'])->name('game.store');
 // Rotta console
 Route::get('/consolex/create', [ConsolexController::class, 'create'])->name('consolex.create');
+Route::post('/consolex/store', [ConsolexController::class, 'store'])->name('consolex.store');
+Route::get('/consolex/index', [ConsolexController::class, 'index'])->name('consolex.index');
+Route::get('/console/show/{consolex}', [ConsolexController::class, 'show'])->name('consolex.show');

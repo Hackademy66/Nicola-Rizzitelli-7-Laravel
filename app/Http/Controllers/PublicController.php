@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Game;
+use App\Models\Consolex;
 use App\Mail\ContactMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -9,8 +10,11 @@ use Illuminate\Support\Facades\Mail;
 class PublicController extends Controller
 {
     public function homepage(){
-        $games = Game::all();
-        return view('welcome', ['games' => $games]);
+        $games = Game::take(3)->get();
+        $consolexes = Consolex::take(3)->get();
+
+
+        return view('welcome', compact('games', 'consolexes'));
     }
     public function contact_us(){
         return view('contact-us');
